@@ -1,7 +1,8 @@
 import {
-  Route, createBrowserRouter,
+  Route,
+  createBrowserRouter,
   createRoutesFromElements,
-  RouterProvider
+  RouterProvider,
 } from "react-router-dom";
 
 //pages
@@ -9,6 +10,7 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Faq from "./pages/help/Faq";
 import Contact from "./pages/help/Contact";
+import NotFound from "./pages/NotFound";
 
 //layouts
 import RouteLayout from "./layouts/RouteLayout";
@@ -23,6 +25,7 @@ const router = createBrowserRouter(
         <Route path="faq" element={<Faq />} />
         <Route path="contact" element={<Contact />} />
       </Route>
+      <Route path="*" element={<NotFound />} />
     </Route>
   )
 );
